@@ -1,0 +1,11 @@
+[install]
+# Automatically install peer dependencies
+peer = true
+
+[install.lockfile]
+# Save the lockfile
+save = true
+
+[install.scopes]
+# Don't hoist hardhat packages to avoid module resolution issues
+"@nomicfoundation" = { hoist = false }

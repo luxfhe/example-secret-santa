@@ -1,0 +1,20 @@
+{
+  "name": "hardhat",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "compile": "hardhat compile",
+    "deploy": "hardhat deploy",
+    "test": "hardhat test",
+    "clean": "hardhat clean",
+    "copy-artifacts": "mkdir -p ../nextjs/src/contracts && cp -r artifacts/contracts ../nextjs/src/contracts/ 2>/dev/null || true && cp -r typechain-types ../nextjs/src/contracts/ 2>/dev/null || true"
+  },
+  "devDependencies": {
+    "@luxfhe/contracts": "^0.5.0",
+    "@openzeppelin/contracts": "^5.0.0",
+    "dotenv": "^16.4.5",
+    "hardhat": "^2.22.0",
+    "hardhat-deploy": "^0.12.0",
+    "typescript": "^5.0.0"
+  }
+}
