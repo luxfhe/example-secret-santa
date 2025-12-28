@@ -50,7 +50,7 @@ export const GamesList = ({ onGameSelect, refreshTrigger }: GamesListProps) => {
           </div>
         ) : isLoading && games.length === 0 ? (
           <div className="py-12 text-center">
-            <Loader2 className="w-8 h-8 text-fhenix-purple/40 animate-spin mx-auto mb-4" />
+            <Loader2 className="w-8 h-8 text-LuxFHE-purple/40 animate-spin mx-auto mb-4" />
             <p className="text-sm text-santa-deepRed/60">Loading your games...</p>
           </div>
         ) : error ? (

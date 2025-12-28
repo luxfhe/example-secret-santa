@@ -4,7 +4,7 @@ import { Moon, Sun } from "lucide-react";
 import { useEffect, useState } from "react";
 
 export const ThemeToggle = () => {
-  const [theme, setTheme] = useState("fhenixlight");
+  const [theme, setTheme] = useState("luxfhelight");
 
   useEffect(() => {
     // Check local storage or system preference
@@ -14,13 +14,13 @@ export const ThemeToggle = () => {
       document.documentElement.setAttribute("data-theme", savedTheme);
     } else {
       // Default to light as requested
-      setTheme("fhenixlight");
-      document.documentElement.setAttribute("data-theme", "fhenixlight");
+      setTheme("luxfhelight");
+      document.documentElement.setAttribute("data-theme", "luxfhelight");
     }
   }, []);
 
   const toggleTheme = () => {
-    const newTheme = theme === "fhenixlight" ? "fhenixdark" : "fhenixlight";
+    const newTheme = theme === "luxfhelight" ? "luxfhedark" : "luxfhelight";
     setTheme(newTheme);
     document.documentElement.setAttribute("data-theme", newTheme);
     localStorage.setItem("theme", newTheme);
@@ -30,9 +30,9 @@ export const ThemeToggle = () => {
     <button
       onClick={toggleTheme}
       className="p-2 rounded-sm hover:bg-base-200 border border-transparent hover:border-base-300 transition-all text-base-content/70 hover:text-base-content"
-      title={`Switch to ${theme === "fhenixlight" ? "dark" : "light"} mode`}
+      title={`Switch to ${theme === "luxfhelight" ? "dark" : "light"} mode`}
     >
-      {theme === "fhenixlight" ? (
+      {theme === "luxfhelight" ? (
         <Moon className="w-5 h-5" />
       ) : (
         <Sun className="w-5 h-5" />

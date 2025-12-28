@@ -24,8 +24,8 @@ const config: Config = {
           cream: "#FFF8E7",
           blush: "#FFD6D0",
         },
-        // Fhenix brand colors
-        fhenix: {
+        // LuxFHE brand colors
+        luxfhe: {
           purple: "#8B5CF6",
           blue: "#3B82F6",
           cyan: "#06B6D4",
@@ -62,7 +62,7 @@ const config: Config = {
     themes: [
       {
         christmas: {
-          "primary": "#8B5CF6",          // Fhenix purple
+          "primary": "#8B5CF6",          // LuxFHE purple
           "secondary": "#B8E4D8",        // Mint green
           "accent": "#FFA090",           // Coral
           "neutral": "#9B1B30",          // Deep red
@@ -70,7 +70,7 @@ const config: Config = {
           "base-200": "#D32F3D",         // Slightly darker red
           "base-300": "#C41E3A",         // Even darker for borders
           "base-content": "#FFFFFF",     // White text
-          "info": "#3B82F6",             // Fhenix blue
+          "info": "#3B82F6",             // LuxFHE blue
           "success": "#10B981",          // Green
           "warning": "#F59E0B",          // Amber
           "error": "#FFB4B8",            // Light pink for errors

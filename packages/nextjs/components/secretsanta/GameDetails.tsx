@@ -52,7 +52,7 @@ export const GameDetails = ({ gameId, onBack }: GameDetailsProps) => {
       case GameState.ACTIVE:
         return "text-santa-deepRed bg-pastel-mint/50";
       case GameState.REVEALED:
-        return "text-fhenix-purple bg-fhenix-purple/10";
+        return "text-LuxFHE-purple bg-LuxFHE-purple/10";
       default:
         return "text-santa-deepRed/60 bg-santa-deepRed/10";
     }
@@ -67,7 +67,7 @@ export const GameDetails = ({ gameId, onBack }: GameDetailsProps) => {
   if (isLoading && !gameInfo) {
     return (
       <div className="py-20 text-center">
-        <Loader2 className="w-8 h-8 text-fhenix-purple animate-spin mx-auto mb-4" />
+        <Loader2 className="w-8 h-8 text-LuxFHE-purple animate-spin mx-auto mb-4" />
         <p className="text-white/60">Loading game details...</p>
       </div>
     );
@@ -132,13 +132,13 @@ export const GameDetails = ({ gameId, onBack }: GameDetailsProps) => {
 
             <button
               onClick={copyGameId}
-              className="flex items-center gap-2 px-3 py-2 bg-white/50 border border-santa-deepRed/20 rounded-lg hover:border-fhenix-purple/50 transition-all"
+              className="flex items-center gap-2 px-3 py-2 bg-white/50 border border-santa-deepRed/20 rounded-lg hover:border-LuxFHE-purple/50 transition-all"
               title="Copy Game ID"
             >
               <span className="text-xs text-santa-deepRed/60">ID:</span>
               <span className="font-mono text-santa-deepRed">{gameId.toString()}</span>
               {copied ? (
-                <CheckCircle2 className="w-4 h-4 text-fhenix-purple" />
+                <CheckCircle2 className="w-4 h-4 text-LuxFHE-purple" />
               ) : (
                 <Copy className="w-4 h-4 text-santa-deepRed/40" />
               )}
@@ -147,9 +147,9 @@ export const GameDetails = ({ gameId, onBack }: GameDetailsProps) => {
 
           {/* Share banner for registration phase */}
           {gameInfo.state === GameState.REGISTRATION && (
-            <div className="p-3 bg-fhenix-purple/10 border border-fhenix-purple/30 rounded-lg mb-4">
+            <div className="p-3 bg-LuxFHE-purple/10 border border-LuxFHE-purple/30 rounded-lg mb-4">
               <div className="flex items-center gap-2">
-                <Share2 className="w-4 h-4 text-fhenix-purple" />
+                <Share2 className="w-4 h-4 text-LuxFHE-purple" />
                 <span className="text-sm text-santa-deepRed">
                   Share Game ID <strong>{gameId.toString()}</strong> with friends to let them join!
                 </span>

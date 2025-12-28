@@ -165,7 +165,7 @@ export const JoinGameForm = ({ onSuccess }: JoinGameFormProps) => {
               onChange={(e) => setGameIdInput(e.target.value)}
               placeholder="e.g., 0"
               min="0"
-              className="input w-full bg-white border border-santa-deepRed/20 focus:border-fhenix-purple rounded-lg text-santa-deepRed placeholder:text-santa-deepRed/40"
+              className="input w-full bg-white border border-santa-deepRed/20 focus:border-LuxFHE-purple rounded-lg text-santa-deepRed placeholder:text-santa-deepRed/40"
               disabled={!isConnected || isProcessing}
             />
           </div>
@@ -182,7 +182,7 @@ export const JoinGameForm = ({ onSuccess }: JoinGameFormProps) => {
               value={nickname}
               onChange={(e) => setNickname(e.target.value)}
               placeholder="e.g., Secret Santa Claus"
-              className="input w-full bg-white border border-santa-deepRed/20 focus:border-fhenix-purple rounded-lg text-santa-deepRed placeholder:text-santa-deepRed/40"
+              className="input w-full bg-white border border-santa-deepRed/20 focus:border-LuxFHE-purple rounded-lg text-santa-deepRed placeholder:text-santa-deepRed/40"
               disabled={!isConnected || isProcessing}
             />
             <p className="text-xs text-santa-deepRed/50 mt-1">
@@ -203,7 +203,7 @@ export const JoinGameForm = ({ onSuccess }: JoinGameFormProps) => {
                 value={password}
                 onChange={(e) => setPassword(e.target.value)}
                 placeholder="Leave empty for public games"
-                className="input w-full bg-white border border-santa-deepRed/20 focus:border-fhenix-purple rounded-lg text-santa-deepRed placeholder:text-santa-deepRed/40 pr-10"
+                className="input w-full bg-white border border-santa-deepRed/20 focus:border-LuxFHE-purple rounded-lg text-santa-deepRed placeholder:text-santa-deepRed/40 pr-10"
                 disabled={!isConnected || isProcessing}
               />
               <button
@@ -225,9 +225,9 @@ export const JoinGameForm = ({ onSuccess }: JoinGameFormProps) => {
 
           {/* Pending join request - ready to complete */}
           {hasPendingJoinReady && !isProcessing && (
-            <div className="p-3 bg-fhenix-purple/10 border border-fhenix-purple/30 rounded-lg">
+            <div className="p-3 bg-LuxFHE-purple/10 border border-LuxFHE-purple/30 rounded-lg">
               <div className="flex items-start gap-3">
-                <Clock className="w-5 h-5 text-fhenix-purple flex-shrink-0 mt-0.5" />
+                <Clock className="w-5 h-5 text-LuxFHE-purple flex-shrink-0 mt-0.5" />
                 <div className="flex-1">
                   <p className="text-sm text-santa-deepRed font-medium">
                     Pending join request found!
@@ -240,7 +240,7 @@ export const JoinGameForm = ({ onSuccess }: JoinGameFormProps) => {
                     type="button"
                     onClick={() => parsedGameId && retryComplete(parsedGameId)}
                     disabled={isRetrying}
-                    className="mt-2 btn-fhenix h-9 px-4 text-sm flex items-center gap-2"
+                    className="mt-2 btn-LuxFHE h-9 px-4 text-sm flex items-center gap-2"
                   >
                     {isRetrying ? (
                       <>
@@ -275,7 +275,7 @@ export const JoinGameForm = ({ onSuccess }: JoinGameFormProps) => {
                   <button
                     type="button"
                     onClick={() => refetchPendingStatus()}
-                    className="mt-2 text-xs text-fhenix-purple hover:text-fhenix-purple/80 flex items-center gap-1"
+                    className="mt-2 text-xs text-LuxFHE-purple hover:text-LuxFHE-purple/80 flex items-center gap-1"
                   >
                     <RefreshCw className="w-3 h-3" />
                     Check status
@@ -302,7 +302,7 @@ export const JoinGameForm = ({ onSuccess }: JoinGameFormProps) => {
               <button
                 type="button"
                 onClick={resetRetry}
-                className="mt-2 text-xs text-fhenix-purple hover:text-fhenix-purple/80 flex items-center gap-1"
+                className="mt-2 text-xs text-LuxFHE-purple hover:text-LuxFHE-purple/80 flex items-center gap-1"
               >
                 <RefreshCw className="w-3 h-3" />
                 Dismiss
@@ -312,9 +312,9 @@ export const JoinGameForm = ({ onSuccess }: JoinGameFormProps) => {
 
           {/* Progress indicator for 2-step join */}
           {isProcessing && (
-            <div className="p-3 bg-fhenix-purple/10 border border-fhenix-purple/30 rounded-lg">
+            <div className="p-3 bg-LuxFHE-purple/10 border border-LuxFHE-purple/30 rounded-lg">
               <div className="flex items-center gap-3">
-                <Loader2 className="w-5 h-5 text-fhenix-purple animate-spin flex-shrink-0" />
+                <Loader2 className="w-5 h-5 text-LuxFHE-purple animate-spin flex-shrink-0" />
                 <div>
                   <p className="text-sm text-santa-deepRed font-medium">
                     {stepMessages[step]}
@@ -346,7 +346,7 @@ export const JoinGameForm = ({ onSuccess }: JoinGameFormProps) => {
               <button
                 type="button"
                 onClick={handleReset}
-                className="mt-2 text-xs text-fhenix-purple hover:text-fhenix-purple/80 flex items-center gap-1"
+                className="mt-2 text-xs text-LuxFHE-purple hover:text-LuxFHE-purple/80 flex items-center gap-1"
               >
                 <RefreshCw className="w-3 h-3" />
                 Try again
@@ -356,7 +356,7 @@ export const JoinGameForm = ({ onSuccess }: JoinGameFormProps) => {
 
           {(isSuccess || retrySuccess) && (
             <div className="p-3 bg-pastel-pink/50 border border-pastel-pink rounded-lg flex items-center gap-2">
-              <CheckCircle2 className="w-5 h-5 text-fhenix-purple" />
+              <CheckCircle2 className="w-5 h-5 text-LuxFHE-purple" />
               <p className="text-sm text-santa-deepRed">
                 Successfully joined the game!
               </p>

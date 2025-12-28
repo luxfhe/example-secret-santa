@@ -1,6 +1,6 @@
 # Encrypted Santa
 
-A Secret Santa application built on Fhenix using Fully Homomorphic Encryption (FHE). Assignments are encrypted on-chain, ensuring no one can see who got whom until the reveal.
+A Secret Santa application built on luxfhe using Fully Homomorphic Encryption (FHE). Assignments are encrypted on-chain, ensuring no one can see who got whom until the reveal.
 
 ## Features
 
@@ -54,7 +54,7 @@ bun dev
 
 ### Deployment
 
-Deploy contracts to Fhenix Helium testnet:
+Deploy contracts to luxfhe Helium testnet:
 
 ```bash
 cd packages/hardhat
@@ -70,8 +70,8 @@ bun hardhat deploy --network testnet
 
 ## Tech Stack
 
-- **Blockchain**: Fhenix (FHE-enabled EVM)
-- **Smart Contracts**: Solidity with Fhenix FHE library
+- **Blockchain**: luxfhe (FHE-enabled EVM)
+- **Smart Contracts**: Solidity with luxfhe FHE library
 - **Frontend**: Next.js 14, TypeScript, Tailwind CSS
 - **Web3**: wagmi, viem, cofhejs
 

@@ -69,7 +69,7 @@ export const CreateGameForm = ({ onSuccess }: CreateGameFormProps) => {
               value={gameName}
               onChange={(e) => setGameName(e.target.value)}
               placeholder="e.g., Office Secret Santa 2024"
-              className="input w-full bg-white border border-santa-deepRed/20 focus:border-fhenix-purple rounded-lg text-santa-deepRed placeholder:text-santa-deepRed/40"
+              className="input w-full bg-white border border-santa-deepRed/20 focus:border-luxfhe-purple rounded-lg text-santa-deepRed placeholder:text-santa-deepRed/40"
               disabled={!isConnected || isLoading}
             />
           </div>
@@ -86,7 +86,7 @@ export const CreateGameForm = ({ onSuccess }: CreateGameFormProps) => {
               value={nickname}
               onChange={(e) => setNickname(e.target.value)}
               placeholder="e.g., Santa Claus"
-              className="input w-full bg-white border border-santa-deepRed/20 focus:border-fhenix-purple rounded-lg text-santa-deepRed placeholder:text-santa-deepRed/40"
+              className="input w-full bg-white border border-santa-deepRed/20 focus:border-luxfhe-purple rounded-lg text-santa-deepRed placeholder:text-santa-deepRed/40"
               disabled={!isConnected || isLoading}
             />
             <p className="text-xs text-santa-deepRed/50 mt-1">
@@ -107,7 +107,7 @@ export const CreateGameForm = ({ onSuccess }: CreateGameFormProps) => {
                 value={password}
                 onChange={(e) => setPassword(e.target.value)}
                 placeholder="Leave empty for public game"
-                className="input w-full bg-white border border-santa-deepRed/20 focus:border-fhenix-purple rounded-lg text-santa-deepRed placeholder:text-santa-deepRed/40 pr-10"
+                className="input w-full bg-white border border-santa-deepRed/20 focus:border-luxfhe-purple rounded-lg text-santa-deepRed placeholder:text-santa-deepRed/40 pr-10"
                 disabled={!isConnected || isLoading}
               />
               <button
@@ -151,7 +151,7 @@ export const CreateGameForm = ({ onSuccess }: CreateGameFormProps) => {
               !nickname.trim() ||
               isLoading
             }
-            className="btn-fhenix w-full h-12 flex items-center justify-center gap-2"
+            className="btn-luxfhe w-full h-12 flex items-center justify-center gap-2"
           >
             {isLoading ? (
               <>

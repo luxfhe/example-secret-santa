@@ -71,10 +71,10 @@ export const PermitModal = ({ isOpen, onClose }: PermitModalProps) => {
       {/* Modal */}
       <div className="relative bg-white rounded-lg shadow-2xl w-full max-w-md mx-4 overflow-hidden">
         {/* Header */}
-        <div className="flex items-center justify-between p-4 border-b border-santa-deepRed/10 bg-fhenix-purple/10">
+        <div className="flex items-center justify-between p-4 border-b border-santa-deepRed/10 bg-luxfhe-purple/10">
           <div className="flex items-center gap-3">
-            <div className="p-2 bg-fhenix-purple/20 rounded-lg">
-              <Key className="w-5 h-5 text-fhenix-purple" />
+            <div className="p-2 bg-luxfhe-purple/20 rounded-lg">
+              <Key className="w-5 h-5 text-luxfhe-purple" />
             </div>
             <h2 className="text-lg font-bold text-santa-deepRed font-display">
               Manage Permit
@@ -90,7 +90,7 @@ export const PermitModal = ({ isOpen, onClose }: PermitModalProps) => {
           {/* Info Section */}
           <div className="p-4 bg-pastel-cream rounded-lg">
             <div className="flex items-start gap-3">
-              <Shield className="w-5 h-5 text-fhenix-purple flex-shrink-0 mt-0.5" />
+              <Shield className="w-5 h-5 text-luxfhe-purple flex-shrink-0 mt-0.5" />
               <div className="space-y-2">
                 <p className="text-sm text-santa-deepRed">
                   A permit is required to reveal your encrypted Secret Santa
@@ -122,14 +122,14 @@ export const PermitModal = ({ isOpen, onClose }: PermitModalProps) => {
               <div className="flex items-center gap-2">
                 {isInitializing ? (
                   <>
-                    <Loader2 className="w-4 h-4 text-fhenix-purple animate-spin" />
+                    <Loader2 className="w-4 h-4 text-luxfhe-purple animate-spin" />
                     <span className="text-sm text-santa-deepRed">
                       Initializing...
                     </span>
                   </>
                 ) : isInitialized ? (
                   <>
-                    <CheckCircle2 className="w-4 h-4 text-fhenix-purple" />
+                    <CheckCircle2 className="w-4 h-4 text-luxfhe-purple" />
                     <span className="text-sm text-santa-deepRed">Ready</span>
                   </>
                 ) : (
@@ -148,7 +148,7 @@ export const PermitModal = ({ isOpen, onClose }: PermitModalProps) => {
               <div className="flex items-center gap-2">
                 {hasValidPermit ? (
                   <>
-                    <CheckCircle2 className="w-4 h-4 text-fhenix-purple" />
+                    <CheckCircle2 className="w-4 h-4 text-luxfhe-purple" />
                     <span className="text-sm text-santa-deepRed">Active</span>
                   </>
                 ) : (
@@ -182,7 +182,7 @@ export const PermitModal = ({ isOpen, onClose }: PermitModalProps) => {
             <button
               onClick={handleGeneratePermit}
               disabled={!isInitialized || isGeneratingPermit || !address}
-              className="btn-fhenix w-full h-12 flex items-center justify-center gap-2"
+              className="btn-luxfhe w-full h-12 flex items-center justify-center gap-2"
             >
               {isGeneratingPermit ? (
                 <>
@@ -208,7 +208,7 @@ export const PermitModal = ({ isOpen, onClose }: PermitModalProps) => {
               <button
                 onClick={handleGeneratePermit}
                 disabled={isGeneratingPermit}
-                className="btn-fhenix flex-1 h-12 flex items-center justify-center gap-2"
+                className="btn-luxfhe flex-1 h-12 flex items-center justify-center gap-2"
               >
                 {isGeneratingPermit ? (
                   <>

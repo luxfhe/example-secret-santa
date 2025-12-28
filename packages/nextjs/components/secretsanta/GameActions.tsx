@@ -65,7 +65,7 @@ export const GameActions = ({
             <button
               onClick={handleFinalize}
               disabled={!canFinalize || isFinalizing}
-              className="btn-fhenix w-full h-11 flex items-center justify-center gap-2"
+              className="btn-luxfhe w-full h-11 flex items-center justify-center gap-2"
             >
               {isFinalizing ? (
                 <>
@@ -95,7 +95,7 @@ export const GameActions = ({
             )}
 
             {finalizeSuccess && (
-              <p className="text-xs text-fhenix-purple flex items-center gap-1">
+              <p className="text-xs text-luxfhe-purple flex items-center gap-1">
                 <CheckCircle2 className="w-3 h-3" />
                 Game finalized! Assignments are now live.
               </p>
@@ -136,7 +136,7 @@ export const GameActions = ({
             )}
 
             {revealSuccess && (
-              <p className="text-xs text-fhenix-purple flex items-center gap-1">
+              <p className="text-xs text-luxfhe-purple flex items-center gap-1">
                 <CheckCircle2 className="w-3 h-3" />
                 All assignments revealed!
               </p>
@@ -146,8 +146,8 @@ export const GameActions = ({
 
         {/* Already revealed message */}
         {gameState === GameState.REVEALED && (
-          <div className="p-3 bg-fhenix-purple/10 border border-fhenix-purple/30 rounded-lg">
-            <p className="text-sm text-fhenix-purple flex items-center gap-2">
+          <div className="p-3 bg-luxfhe-purple/10 border border-luxfhe-purple/30 rounded-lg">
+            <p className="text-sm text-luxfhe-purple flex items-center gap-2">
               <CheckCircle2 className="w-4 h-4" />
               All assignments have been revealed!
             </p>

@@ -21,7 +21,7 @@ export const WalletCard = () => {
         onClick={() => openConnectModal?.()}
         onMouseEnter={() => setIsHovered(true)}
         onMouseLeave={() => setIsHovered(false)}
-        className="btn-fhenix flex items-center gap-2 h-10 px-4"
+        className="btn-luxfhe flex items-center gap-2 h-10 px-4"
       >
         {isHovered ? (
           <Unlock className="w-4 h-4" />
@@ -36,8 +36,8 @@ export const WalletCard = () => {
   return (
     <div className="flex items-center gap-2">
       {/* Wallet Address */}
-      <div className="flex items-center gap-2 px-3 py-2 bg-white/10 border border-fhenix-purple/30 rounded-lg h-10">
-        <Wallet className="w-4 h-4 text-fhenix-purple" />
+      <div className="flex items-center gap-2 px-3 py-2 bg-white/10 border border-luxfhe-purple/30 rounded-lg h-10">
+        <Wallet className="w-4 h-4 text-luxfhe-purple" />
         <span className="text-white text-sm font-mono">{truncatedAddress}</span>
       </div>
 

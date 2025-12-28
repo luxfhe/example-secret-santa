@@ -1,7 +1,7 @@
 // SPDX-License-Identifier: MIT
 pragma solidity ^0.8.24;
 
-import {FHE, euint32, ebool, InEuint32} from "@fhenixprotocol/cofhe-contracts/FHE.sol";
+import {FHE, euint32, ebool, InEuint32} from "@luxfhe/cofhe-contracts/FHE.sol";
 
 /// ════════════════════════════════════════════════════════════════════════════
 /// SECRET SANTA - Password Protected Games with FHE

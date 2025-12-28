@@ -51,7 +51,7 @@ export const ParticipantsList = ({ gameId, creatorAddress }: ParticipantsListPro
 
         {isLoading ? (
           <div className="py-4 text-center">
-            <Loader2 className="w-5 h-5 text-fhenix-purple/40 animate-spin mx-auto" />
+            <Loader2 className="w-5 h-5 text-LuxFHE-purple/40 animate-spin mx-auto" />
           </div>
         ) : error ? (
           <p className="text-sm text-pastel-coral">{error}</p>
@@ -67,7 +67,7 @@ export const ParticipantsList = ({ gameId, creatorAddress }: ParticipantsListPro
                 <div
                   key={participant.address}
                   className={`flex items-center justify-between p-2 rounded-lg ${
-                    isCurrentUser ? "bg-fhenix-purple/10 border border-fhenix-purple/30" : "bg-white/50"
+                    isCurrentUser ? "bg-LuxFHE-purple/10 border border-LuxFHE-purple/30" : "bg-white/50"
                   }`}
                 >
                   <div className="flex items-center gap-2">
@@ -100,9 +100,9 @@ export const ParticipantsList = ({ gameId, creatorAddress }: ParticipantsListPro
                       </div>
                     )}
                     {isCurrentUser && (
-                      <div className="flex items-center gap-1 px-2 py-0.5 bg-fhenix-purple/20 rounded-lg">
-                        <User className="w-3 h-3 text-fhenix-purple" />
-                        <span className="text-xs text-fhenix-purple font-medium">You</span>
+                      <div className="flex items-center gap-1 px-2 py-0.5 bg-LuxFHE-purple/20 rounded-lg">
+                        <User className="w-3 h-3 text-LuxFHE-purple" />
+                        <span className="text-xs text-LuxFHE-purple font-medium">You</span>
                       </div>
                     )}
                   </div>

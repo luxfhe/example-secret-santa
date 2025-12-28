@@ -4,7 +4,7 @@ import { Providers } from "@/components/Providers";
 import { Toaster } from "react-hot-toast";
 
 export const metadata: Metadata = {
-  title: "Secret Santa | Fhenix",
+  title: "Secret Santa | LuxFHE",
   description: "Create or join a Secret Santa game with fully encrypted assignments powered by FHE. No one knows who got whom!",
 };
 

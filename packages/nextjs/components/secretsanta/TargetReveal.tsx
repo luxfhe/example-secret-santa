@@ -64,7 +64,7 @@ export const TargetReveal = ({ gameId, refreshTrigger }: TargetRevealProps) => {
       <div className="bg-pastel-coral rounded-sm p-5 relative overflow-hidden">
         {/* Subtle encryption scan line effect */}
         <div className="absolute inset-0 pointer-events-none opacity-20">
-          <div className="absolute top-0 left-0 right-0 h-px bg-gradient-to-r from-transparent via-fhenix-purple to-transparent animate-pulse" />
+          <div className="absolute top-0 left-0 right-0 h-px bg-gradient-to-r from-transparent via-luxfhe-purple to-transparent animate-pulse" />
         </div>
 
         <div className="flex items-center gap-3 mb-4">
@@ -87,18 +87,18 @@ export const TargetReveal = ({ gameId, refreshTrigger }: TargetRevealProps) => {
 
         {!encryptedIndex ? (
           <div className="py-8 text-center">
-            <Loader2 className="w-8 h-8 text-fhenix-purple/40 animate-spin mx-auto mb-4" />
+            <Loader2 className="w-8 h-8 text-luxfhe-purple/40 animate-spin mx-auto mb-4" />
             <p className="text-sm text-santa-deepRed/60">Loading your encrypted assignment...</p>
           </div>
         ) : showTarget && target ? (
           <div className="space-y-4">
-            <div className="p-6 bg-fhenix-purple/10 border border-fhenix-purple/30 rounded-lg text-center">
+            <div className="p-6 bg-luxfhe-purple/10 border border-luxfhe-purple/30 rounded-lg text-center">
               <p className="text-sm text-santa-deepRed/70 mb-2">
                 You are the Secret Santa for:
               </p>
               <div className="flex flex-col items-center gap-2">
-                <div className="w-12 h-12 rounded-full bg-fhenix-purple/20 flex items-center justify-center">
-                  <User className="w-6 h-6 text-fhenix-purple" />
+                <div className="w-12 h-12 rounded-full bg-luxfhe-purple/20 flex items-center justify-center">
+                  <User className="w-6 h-6 text-luxfhe-purple" />
                 </div>
                 {target.name ? (
                   <>
@@ -128,8 +128,8 @@ export const TargetReveal = ({ gameId, refreshTrigger }: TargetRevealProps) => {
         ) : (
           <div className="space-y-4">
             <div className="p-6 bg-white/30 border border-santa-deepRed/10 rounded-lg text-center">
-              <div className="w-16 h-16 rounded-full bg-fhenix-purple/10 flex items-center justify-center mx-auto mb-4">
-                <Gift className="w-8 h-8 text-fhenix-purple/40" />
+              <div className="w-16 h-16 rounded-full bg-luxfhe-purple/10 flex items-center justify-center mx-auto mb-4">
+                <Gift className="w-8 h-8 text-luxfhe-purple/40" />
               </div>
               <p className="text-santa-deepRed/60 font-mono">
                 {"••••••••••••••••"}
@@ -142,7 +142,7 @@ export const TargetReveal = ({ gameId, refreshTrigger }: TargetRevealProps) => {
             {!hasValidPermit ? (
               <button
                 onClick={() => setIsPermitModalOpen(true)}
-                className="btn-fhenix w-full h-12 flex items-center justify-center gap-2"
+                className="btn-luxfhe w-full h-12 flex items-center justify-center gap-2"
               >
                 <Key className="w-5 h-5" />
                 Generate Permit First
@@ -151,7 +151,7 @@ export const TargetReveal = ({ gameId, refreshTrigger }: TargetRevealProps) => {
               <button
                 onClick={handleReveal}
                 disabled={isLoading || !isInitialized}
-                className="btn-fhenix w-full h-12 flex items-center justify-center gap-2"
+                className="btn-luxfhe w-full h-12 flex items-center justify-center gap-2"
               >
                 {isLoading ? (
                   <>

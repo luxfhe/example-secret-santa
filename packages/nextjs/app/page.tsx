@@ -38,7 +38,7 @@ const LockDecoration = ({
 }: {
   className?: string;
   style?: React.CSSProperties;
-}) => <Lock className={`text-fhenix-purple/10 ${className}`} style={style} />;
+}) => <Lock className={`text-LuxFHE-purple/10 ${className}`} style={style} />;
 
 export default function Home() {
   // Initialize CoFHE when wallet is connected
@@ -62,7 +62,7 @@ export default function Home() {
   };
 
   return (
-    <div className="min-h-screen font-sans selection:bg-fhenix-purple selection:text-white">
+    <div className="min-h-screen font-sans selection:bg-LuxFHE-purple selection:text-white">
       {/* Snowflake decorations */}
       <div className="fixed inset-0 z-0 pointer-events-none overflow-hidden">
         <SnowflakeDecoration className="absolute top-20 left-[10%] w-8 h-8 animate-twinkle" />
@@ -100,11 +100,11 @@ export default function Home() {
         />
         {/* Binary streams */}
         <div className="absolute top-[10%] right-[3%] flex flex-col gap-1 opacity-20">
-          <span className="text-fhenix-purple text-xs font-mono animate-pulse">
+          <span className="text-LuxFHE-purple text-xs font-mono animate-pulse">
             01101
           </span>
           <span
-            className="text-fhenix-purple text-xs font-mono animate-pulse"
+            className="text-LuxFHE-purple text-xs font-mono animate-pulse"
             style={{ animationDelay: "0.2s" }}
           >
             10010
@@ -112,7 +112,7 @@ export default function Home() {
         </div>
         <div className="absolute bottom-[25%] left-[2%] flex flex-col gap-1 opacity-20">
           <span
-            className="text-fhenix-purple text-xs font-mono animate-pulse"
+            className="text-LuxFHE-purple text-xs font-mono animate-pulse"
             style={{ animationDelay: "0.3s" }}
           >
             10110
@@ -122,8 +122,8 @@ export default function Home() {
 
       {/* Subtle glow effects */}
       <div className="fixed inset-0 z-0 pointer-events-none">
-        <div className="absolute top-[-20%] left-[-10%] w-[50%] h-[50%] bg-fhenix-purple/10 blur-[150px] rounded-full"></div>
-        <div className="absolute bottom-[-20%] right-[-10%] w-[50%] h-[50%] bg-fhenix-blue/10 blur-[150px] rounded-full"></div>
+        <div className="absolute top-[-20%] left-[-10%] w-[50%] h-[50%] bg-LuxFHE-purple/10 blur-[150px] rounded-full"></div>
+        <div className="absolute bottom-[-20%] right-[-10%] w-[50%] h-[50%] bg-LuxFHE-blue/10 blur-[150px] rounded-full"></div>
       </div>
 
       <main className="relative z-10 max-w-5xl mx-auto flex flex-col gap-4 p-4 md:p-6">
@@ -242,8 +242,8 @@ export default function Home() {
           <div className="flex items-center gap-2">
             <span className="text-white/40 text-sm">Powered by</span>
             <Image
-              src="/fhenix_logo_dark.svg"
-              alt="Fhenix"
+              src="/LuxFHE_logo_dark.svg"
+              alt="LuxFHE"
               width={60}
               height={60}
               className="opacity-80"

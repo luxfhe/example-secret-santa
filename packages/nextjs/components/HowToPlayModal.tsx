@@ -54,10 +54,10 @@ export const HowToPlayModal = ({ isOpen, onClose }: HowToPlayModalProps) => {
       {/* Modal */}
       <div className="relative bg-white rounded-lg shadow-2xl w-full max-w-lg mx-4 overflow-hidden max-h-[90vh] flex flex-col">
         {/* Header */}
-        <div className="flex items-center justify-between p-4 border-b border-santa-deepRed/10 bg-fhenix-purple/10">
+        <div className="flex items-center justify-between p-4 border-b border-santa-deepRed/10 bg-luxfhe-purple/10">
           <div className="flex items-center gap-3">
-            <div className="p-2 bg-fhenix-purple/20 rounded-lg">
-              <Gift className="w-5 h-5 text-fhenix-purple" />
+            <div className="p-2 bg-luxfhe-purple/20 rounded-lg">
+              <Gift className="w-5 h-5 text-luxfhe-purple" />
             </div>
             <h2 className="text-lg font-bold text-santa-deepRed font-display">
               How to Play
@@ -90,13 +90,13 @@ export const HowToPlayModal = ({ isOpen, onClose }: HowToPlayModalProps) => {
                 className="flex gap-4 p-4 bg-pastel-mint/20 rounded-lg"
               >
                 <div className="flex-shrink-0">
-                  <div className="w-10 h-10 bg-fhenix-purple/20 rounded-full flex items-center justify-center">
-                    <step.icon className="w-5 h-5 text-fhenix-purple" />
+                  <div className="w-10 h-10 bg-luxfhe-purple/20 rounded-full flex items-center justify-center">
+                    <step.icon className="w-5 h-5 text-luxfhe-purple" />
                   </div>
                 </div>
                 <div className="flex-1 min-w-0">
                   <div className="flex items-center gap-2 mb-1">
-                    <span className="text-xs font-bold text-fhenix-purple">
+                    <span className="text-xs font-bold text-luxfhe-purple">
                       Step {index + 1}
                     </span>
                   </div>
@@ -112,17 +112,17 @@ export const HowToPlayModal = ({ isOpen, onClose }: HowToPlayModalProps) => {
           </div>
 
           {/* Footer note */}
-          <div className="p-4 bg-fhenix-purple/10 rounded-lg border border-fhenix-purple/20">
+          <div className="p-4 bg-luxfhe-purple/10 rounded-lg border border-luxfhe-purple/20">
             <p className="text-xs text-santa-deepRed/80 text-center">
               <Lock className="w-3 h-3 inline-block mr-1" />
-              Powered by Fhenix FHE technology on Arbitrum Sepolia
+              Powered by LuxFHE FHE technology on Arbitrum Sepolia
             </p>
           </div>
         </div>
 
         {/* Close button */}
         <div className="p-4 border-t border-santa-deepRed/10 bg-pastel-cream/30">
-          <button onClick={onClose} className="btn-fhenix w-full h-10">
+          <button onClick={onClose} className="btn-luxfhe w-full h-10">
             Got it!
           </button>
         </div>

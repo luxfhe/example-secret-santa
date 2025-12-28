@@ -20,7 +20,7 @@ export const GameCard = ({ game, onClick }: GameCardProps) => {
       case GameState.ACTIVE:
         return "text-santa-deepRed bg-pastel-mint/50 border-pastel-mint";
       case GameState.REVEALED:
-        return "text-fhenix-purple bg-fhenix-purple/10 border-fhenix-purple/30";
+        return "text-luxfhe-purple bg-luxfhe-purple/10 border-luxfhe-purple/30";
       default:
         return "text-santa-deepRed/60 bg-santa-deepRed/10 border-santa-deepRed/20";
     }
@@ -34,7 +34,7 @@ export const GameCard = ({ game, onClick }: GameCardProps) => {
   return (
     <button
       onClick={onClick}
-      className="w-full p-4 bg-white border border-santa-deepRed/10 rounded-lg hover:border-fhenix-purple/50 hover:shadow-md transition-all text-left group"
+      className="w-full p-4 bg-white border border-santa-deepRed/10 rounded-lg hover:border-luxfhe-purple/50 hover:shadow-md transition-all text-left group"
     >
       <div className="flex items-start justify-between">
         <div className="flex-1 min-w-0">
@@ -46,9 +46,9 @@ export const GameCard = ({ game, onClick }: GameCardProps) => {
               </div>
             )}
             {isCreator && (
-              <div className="flex items-center gap-1 px-2 py-0.5 bg-fhenix-purple/10 rounded-lg">
-                <Crown className="w-3 h-3 text-fhenix-purple" />
-                <span className="text-xs text-fhenix-purple font-medium">Creator</span>
+              <div className="flex items-center gap-1 px-2 py-0.5 bg-luxfhe-purple/10 rounded-lg">
+                <Crown className="w-3 h-3 text-luxfhe-purple" />
+                <span className="text-xs text-luxfhe-purple font-medium">Creator</span>
               </div>
             )}
           </div>
@@ -73,7 +73,7 @@ export const GameCard = ({ game, onClick }: GameCardProps) => {
           <div className={`px-2 py-1 text-xs font-medium rounded-lg border ${getStateStyles()}`}>
             {gameStateLabels[game.state]}
           </div>
-          <ChevronRight className="w-5 h-5 text-santa-deepRed/30 group-hover:text-fhenix-purple transition-colors" />
+          <ChevronRight className="w-5 h-5 text-santa-deepRed/30 group-hover:text-luxfhe-purple transition-colors" />
         </div>
       </div>
     </button>

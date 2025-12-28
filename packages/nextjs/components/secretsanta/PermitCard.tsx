@@ -24,11 +24,11 @@ export const PermitCard = () => {
   return (
     <>
       <div className="bg-white p-4 pb-8 rounded-sm shadow-polaroid">
-        <div className="bg-fhenix-purple/10 rounded-sm p-5">
+        <div className="bg-luxfhe-purple/10 rounded-sm p-5">
           <div className="flex items-center justify-between mb-3">
             <div className="flex items-center gap-3">
-              <div className="p-2 bg-fhenix-purple/20 rounded-lg">
-                <Shield className="w-4 h-4 text-fhenix-purple" />
+              <div className="p-2 bg-luxfhe-purple/20 rounded-lg">
+                <Shield className="w-4 h-4 text-luxfhe-purple" />
               </div>
               <h3 className="text-lg font-bold font-display text-santa-deepRed">
                 FHE Permit
@@ -52,7 +52,7 @@ export const PermitCard = () => {
             <div className="flex items-center gap-2">
               {isInitializing ? (
                 <>
-                  <Loader2 className="w-4 h-4 text-fhenix-purple animate-spin" />
+                  <Loader2 className="w-4 h-4 text-luxfhe-purple animate-spin" />
                   <span className="text-sm text-santa-deepRed">Initializing...</span>
                 </>
               ) : !isInitialized ? (
@@ -62,7 +62,7 @@ export const PermitCard = () => {
                 </>
               ) : hasValidPermit ? (
                 <>
-                  <CheckCircle2 className="w-4 h-4 text-fhenix-purple" />
+                  <CheckCircle2 className="w-4 h-4 text-luxfhe-purple" />
                   <span className="text-sm text-santa-deepRed">Active</span>
                 </>
               ) : (
@@ -78,7 +78,7 @@ export const PermitCard = () => {
             <button
               onClick={handleQuickGenerate}
               disabled={isGeneratingPermit}
-              className="btn-fhenix w-full h-10 flex items-center justify-center gap-2 text-sm"
+              className="btn-luxfhe w-full h-10 flex items-center justify-center gap-2 text-sm"
             >
               {isGeneratingPermit ? (
                 <>
@@ -96,7 +96,7 @@ export const PermitCard = () => {
 
           {hasValidPermit && (
             <div className="p-3 bg-pastel-mint/30 rounded-lg flex items-center gap-2">
-              <CheckCircle2 className="w-4 h-4 text-fhenix-purple flex-shrink-0" />
+              <CheckCircle2 className="w-4 h-4 text-luxfhe-purple flex-shrink-0" />
               <span className="text-xs text-santa-deepRed">
                 You can view your encrypted assignments
               </span>
