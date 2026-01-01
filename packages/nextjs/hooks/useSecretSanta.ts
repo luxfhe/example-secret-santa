@@ -2,8 +2,8 @@
 
 import { useState, useCallback, useEffect, useRef } from "react";
 import { useAccount, usePublicClient, useWriteContract, useWaitForTransactionReceipt } from "wagmi";
-import { Encryptable, FheTypes, cofhejs } from "cofhejs/web";
-import { useCofheStore } from "@/services/store/cofheStore";
+import { Encryptable, FheTypes, fhe } from "@luxfhe/v2-sdk/web";
+import { useFHEStore } from "@/services/store/luxfheStore";
 import { useSecretSantaStore } from "@/services/store/secretSantaStore";
 import {
   CONTRACT_ADDRESS,
@@ -227,7 +227,7 @@ export function useCreateGame() {
   const publicClient = usePublicClient();
   const { address, chain } = useAccount();
   const contractAddress = useContractAddress();
-  const { isInitialized } = useCofheStore();
+  const { isInitialized } = useFHEStore();
   const { addGame } = useSecretSantaStore();
   const { writeContractAsync, data: txHash, isPending } = useWriteContract();
   const [isSubmitting, setIsSubmitting] = useState(false);
@@ -266,7 +266,7 @@ export function useCreateGame() {
         const passwordValue = hasPassword ? BigInt(hashPassword(password)) : BigInt(0);
 
         // Encrypt both entropy and password
-        const encrypted = await cofhejs.encrypt([
+        const encrypted = await fhe.encrypt([
           Encryptable.uint32(entropy),
           Encryptable.uint32(passwordValue),
         ]);
@@ -364,7 +364,7 @@ export function useJoinGame() {
   const publicClient = usePublicClient();
   const { address, chain } = useAccount();
   const contractAddress = useContractAddress();
-  const { isInitialized } = useCofheStore();
+  const { isInitialized } = useFHEStore();
   const { addGame } = useSecretSantaStore();
   const { writeContractAsync, isPending } = useWriteContract();
   const [step, setStep] = useState<JoinStep>("idle");
@@ -428,7 +428,7 @@ export function useJoinGame() {
         const passwordValue = password ? BigInt(hashPassword(password)) : BigInt(0);
 
         // Encrypt both
-        const encrypted = await cofhejs.encrypt([
+        const encrypted = await fhe.encrypt([
           Encryptable.uint32(passwordValue),
           Encryptable.uint32(entropy),
         ]);
@@ -1101,7 +1101,7 @@ export function useMyTarget(gameId: bigint | null) {
   const publicClient = usePublicClient();
   const contractAddress = useContractAddress();
   const { address } = useAccount();
-  const { isInitialized } = useCofheStore();
+  const { isInitialized } = useFHEStore();
   const [encryptedIndex, setEncryptedIndex] = useState<bigint | null>(null);
   const [targetIndex, setTargetIndex] = useState<number | null>(null);
   const [isLoading, setIsLoading] = useState(false);
@@ -1145,7 +1145,7 @@ export function useMyTarget(gameId: bigint | null) {
     setError(null);
 
     try {
-      const result = await cofhejs.unseal(encryptedIndex, FheTypes.Uint32);
+      const result = await fhe.unseal(encryptedIndex, FheTypes.Uint32);
 
       if (result.success && result.data !== undefined) {
         const index = Number(result.data);

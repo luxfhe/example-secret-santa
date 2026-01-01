@@ -1,7 +1,7 @@
 // SPDX-License-Identifier: MIT
 pragma solidity ^0.8.24;
 
-import {FHE, euint32, ebool, InEuint32} from "@luxfhe/cofhe-contracts/FHE.sol";
+import {FHE, euint32, ebool, Euint32} from "@luxfi/contracts/fhe/FHE.sol";
 
 /// ════════════════════════════════════════════════════════════════════════════
 /// SECRET SANTA - Password Protected Games with FHE
@@ -144,8 +144,8 @@ contract SecretSanta {
     function createGame(
         string calldata name,
         string calldata creatorName,
-        InEuint32 calldata creatorEntropy,
-        InEuint32 calldata password,
+        Euint32 calldata creatorEntropy,
+        Euint32 calldata password,
         bool hasPassword
     ) external returns (uint256 gameId) {
         gameId = gameCount++;
@@ -191,8 +191,8 @@ contract SecretSanta {
     function requestJoinGame(
         uint256 gameId,
         string calldata playerName,
-        InEuint32 calldata password,
-        InEuint32 calldata userEntropy
+        Euint32 calldata password,
+        Euint32 calldata userEntropy
     ) external {
         if (gameId >= gameCount) revert GameNotFound();
         Game storage game = games[gameId];
@@ -242,7 +242,7 @@ contract SecretSanta {
         PendingJoin storage pending = pendingJoins[gameId][msg.sender];
 
         // Get decrypted result
-        (bool matched, bool decrypted) = FHE.getDecryptResultSafe(pending.passwordMatch);
+        (bool matched, bool decrypted) = FHE.revealSafe(pending.passwordMatch);
         if (!decrypted) revert DecryptionNotReady();
         if (!matched) revert InvalidPassword();
 
@@ -254,7 +254,7 @@ contract SecretSanta {
     }
 
     /// @notice Internal function to add a player with fresh entropy input
-    function _addPlayer(uint256 gameId, string calldata playerName, InEuint32 calldata userEntropy) internal {
+    function _addPlayer(uint256 gameId, string calldata playerName, Euint32 calldata userEntropy) internal {
         Game storage game = games[gameId];
 
         game.participants.push(msg.sender);
@@ -305,7 +305,7 @@ contract SecretSanta {
         isRegistered = playerIndex[gameId][player] != 0;
 
         if (hasPending) {
-            (, isDecrypted) = FHE.getDecryptResultSafe(pendingJoins[gameId][player].passwordMatch);
+            (, isDecrypted) = FHE.revealSafe(pendingJoins[gameId][player].passwordMatch);
         }
     }
 

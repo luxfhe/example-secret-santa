@@ -10,7 +10,7 @@ import {
   AlertCircle,
   Trash2,
 } from "lucide-react";
-import { useCofhe } from "@/hooks/useCofhe";
+import { useFHE } from "@/hooks/useFHE";
 import { usePermit } from "@/hooks/usePermit";
 import { useAccount, useChainId, useChains } from "wagmi";
 
@@ -23,7 +23,7 @@ export const PermitModal = ({ isOpen, onClose }: PermitModalProps) => {
   const { address } = useAccount();
   const chainId = useChainId();
   const chains = useChains();
-  const { isInitialized, isInitializing, error: cofheError } = useCofhe();
+  const { isInitialized, isInitializing, error: fheError } = useFHE();
   const {
     hasValidPermit,
     isGeneratingPermit,
@@ -164,12 +164,12 @@ export const PermitModal = ({ isOpen, onClose }: PermitModalProps) => {
           </div>
 
           {/* Error Display */}
-          {(cofheError || permitError) && (
+          {(fheError || permitError) && (
             <div className="p-4 bg-pastel-coral/30 border border-pastel-coral rounded-lg">
               <div className="flex items-start gap-2">
                 <AlertCircle className="w-4 h-4 text-santa-deepRed flex-shrink-0 mt-0.5" />
                 <p className="text-sm text-santa-deepRed">
-                  {cofheError?.message || permitError}
+                  {fheError?.message || permitError}
                 </p>
               </div>
             </div>

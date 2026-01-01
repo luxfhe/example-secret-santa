@@ -3,13 +3,13 @@
 import { useState } from "react";
 import { Key, Shield, CheckCircle2, Loader2, AlertCircle, Settings } from "lucide-react";
 import { usePermit } from "@/hooks/usePermit";
-import { useCofhe } from "@/hooks/useCofhe";
+import { useFHE } from "@/hooks/useFHE";
 import { useAccount } from "wagmi";
 import { PermitModal } from "@/components/PermitModal";
 
 export const PermitCard = () => {
   const { isConnected } = useAccount();
-  const { isInitialized, isInitializing } = useCofhe();
+  const { isInitialized, isInitializing } = useFHE();
   const { hasValidPermit, isGeneratingPermit, generatePermit } = usePermit();
   const [isModalOpen, setIsModalOpen] = useState(false);
 

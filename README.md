@@ -14,7 +14,7 @@ A Secret Santa application built on luxfhe using Fully Homomorphic Encryption (F
 ```
 packages/
 ├── hardhat/          # Smart contracts (Solidity + FHE)
-└── nextjs/           # Frontend (Next.js + wagmi + cofhejs)
+└── nextjs/           # Frontend (Next.js + wagmi + fhe)
 ```
 
 ## Getting Started
@@ -73,7 +73,7 @@ bun hardhat deploy --network testnet
 - **Blockchain**: luxfhe (FHE-enabled EVM)
 - **Smart Contracts**: Solidity with luxfhe FHE library
 - **Frontend**: Next.js 14, TypeScript, Tailwind CSS
-- **Web3**: wagmi, viem, cofhejs
+- **Web3**: wagmi, viem, fhe
 
 ## License
 

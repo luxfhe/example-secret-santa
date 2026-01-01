@@ -15,8 +15,8 @@
   --santa-red: #E63946;
   --santa-dark-red: #C41E3A;
   --santa-deep-red: #9B1B30;
-  --fhenix-purple: #8B5CF6;
-  --fhenix-blue: #3B82F6;
+  --luxfhe-purple: #8B5CF6;
+  --luxfhe-blue: #3B82F6;
   --pastel-pink: #FFB4B8;
   --pastel-mint: #B8E4D8;
   --pastel-coral: #FFA090;
@@ -32,14 +32,14 @@ body {
 
 /* Custom Button Styles */
 @layer components {
-  /* Fhenix-styled primary button with encryption shimmer */
-  .btn-fhenix {
+  /* LuxFHE-styled primary button with encryption shimmer */
+  .btn-luxfhe {
     @apply transition-all duration-200 font-semibold rounded-lg px-6 py-2 relative overflow-hidden;
-    background: linear-gradient(135deg, var(--fhenix-purple) 0%, var(--fhenix-blue) 100%) !important;
+    background: linear-gradient(135deg, var(--luxfhe-purple) 0%, var(--luxfhe-blue) 100%) !important;
     color: white !important;
   }
 
-  .btn-fhenix::before {
+  .btn-luxfhe::before {
     content: '';
     position: absolute;
     top: 0;
@@ -50,22 +50,22 @@ body {
     transition: left 0.5s ease;
   }
 
-  .btn-fhenix:hover::before {
+  .btn-luxfhe:hover::before {
     left: 100%;
   }
 
-  .btn-fhenix:hover {
+  .btn-luxfhe:hover {
     transform: translateY(-2px);
     box-shadow: 0 8px 20px rgba(139, 92, 246, 0.4);
   }
 
-  .btn-fhenix:disabled {
+  .btn-luxfhe:disabled {
     opacity: 0.6;
     transform: none;
     box-shadow: none;
   }
 
-  .btn-fhenix:disabled::before {
+  .btn-luxfhe:disabled::before {
     display: none;
   }
 
@@ -136,7 +136,7 @@ body {
   .encrypted-badge {
     @apply inline-flex items-center gap-1.5 px-3 py-1.5 rounded-full text-xs font-medium;
     background: linear-gradient(135deg, rgba(139, 92, 246, 0.15) 0%, rgba(59, 130, 246, 0.15) 100%);
-    color: var(--fhenix-purple);
+    color: var(--luxfhe-purple);
     border: 1px solid rgba(139, 92, 246, 0.3);
   }
 
@@ -176,7 +176,7 @@ body {
     left: 0;
     right: 0;
     height: 2px;
-    background: linear-gradient(90deg, transparent, var(--fhenix-purple), transparent);
+    background: linear-gradient(90deg, transparent, var(--luxfhe-purple), transparent);
     animation: scan 2s linear infinite;
   }
 
@@ -197,7 +197,7 @@ body {
 }
 
 ::-webkit-scrollbar-thumb {
-  background: linear-gradient(180deg, var(--fhenix-purple) 0%, var(--fhenix-blue) 100%);
+  background: linear-gradient(180deg, var(--luxfhe-purple) 0%, var(--luxfhe-blue) 100%);
   border-radius: 4px;
 }
 

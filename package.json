@@ -3,14 +3,14 @@
   "private": true,
   "workspaces": ["packages/*"],
   "scripts": {
-    "dev": "bun --filter nextjs dev",
-    "build": "bun run --filter hardhat compile && bun run --filter nextjs build",
-    "deploy": "bun --filter hardhat deploy",
-    "test": "bun --filter hardhat test",
+    "dev": "pnpm --filter @shielded-stablecoin/nextjs dev",
+    "build": "pnpm --filter hardhat compile && pnpm --filter @shielded-stablecoin/nextjs build",
+    "deploy": "pnpm --filter hardhat deploy",
+    "test": "pnpm --filter hardhat test",
     "clean": "rm -rf packages/*/node_modules packages/*/.next packages/*/dist node_modules"
   },
   "devDependencies": {
-    "@luxfhe/contracts": "^0.5.0",
+    "@luxfi/contracts": "^1.4.0",
     "@openzeppelin/contracts": "^5.0.0",
     "dotenv": "^16.4.5",
     "hardhat": "^2.22.0",

@@ -12,7 +12,7 @@ import {
   User,
 } from "lucide-react";
 import { useCreateGame } from "@/hooks/useSecretSanta";
-import { useCofheStore } from "@/services/store/cofheStore";
+import { useFHEStore } from "@/services/store/luxfheStore";
 import { useAccount } from "wagmi";
 
 interface CreateGameFormProps {
@@ -21,7 +21,7 @@ interface CreateGameFormProps {
 
 export const CreateGameForm = ({ onSuccess }: CreateGameFormProps) => {
   const { isConnected } = useAccount();
-  const { isInitialized } = useCofheStore();
+  const { isInitialized } = useFHEStore();
   const { createGame, isLoading, isSuccess, error } = useCreateGame();
   const [gameName, setGameName] = useState("");
   const [nickname, setNickname] = useState("");

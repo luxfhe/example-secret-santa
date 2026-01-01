@@ -19,7 +19,7 @@ import {
   PermitCard,
 } from "@/components/secretsanta";
 import { GameInfo } from "@/hooks/useSecretSanta";
-import { useCofhe } from "@/hooks/useCofhe";
+import { useFHE } from "@/hooks/useFHE";
 import Image from "next/image";
 
 // Snowflake decoration component
@@ -42,7 +42,7 @@ const LockDecoration = ({
 
 export default function Home() {
   // Initialize CoFHE when wallet is connected
-  useCofhe();
+  useFHE();
 
   const [selectedGame, setSelectedGame] = useState<GameInfo | null>(null);
   const [refreshKey, setRefreshKey] = useState(0);

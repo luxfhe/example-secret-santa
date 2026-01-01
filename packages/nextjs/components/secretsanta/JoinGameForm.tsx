@@ -19,7 +19,7 @@ import {
   usePendingJoinStatus,
   useCompleteJoinOnly,
 } from "@/hooks/useSecretSanta";
-import { useCofheStore } from "@/services/store/cofheStore";
+import { useFHEStore } from "@/services/store/luxfheStore";
 import { useAccount } from "wagmi";
 
 interface JoinGameFormProps {
@@ -37,7 +37,7 @@ const stepMessages: Record<JoinStep, string> = {
 
 export const JoinGameForm = ({ onSuccess }: JoinGameFormProps) => {
   const { isConnected } = useAccount();
-  const { isInitialized } = useCofheStore();
+  const { isInitialized } = useFHEStore();
   const { requestJoin, reset, step, isLoading, isSuccess, error } =
     useJoinGame();
   const [gameIdInput, setGameIdInput] = useState("");

@@ -4,7 +4,7 @@ import { useState, useEffect } from "react";
 import { Eye, EyeOff, Loader2, AlertCircle, Key, Gift, User } from "lucide-react";
 import { useMyTarget, useParticipantsWithNames, ParticipantWithName } from "@/hooks/useSecretSanta";
 import { usePermit } from "@/hooks/usePermit";
-import { useCofheStore } from "@/services/store/cofheStore";
+import { useFHEStore } from "@/services/store/luxfheStore";
 import { PermitModal } from "@/components/PermitModal";
 
 interface TargetRevealProps {
@@ -13,7 +13,7 @@ interface TargetRevealProps {
 }
 
 export const TargetReveal = ({ gameId, refreshTrigger }: TargetRevealProps) => {
-  const { isInitialized } = useCofheStore();
+  const { isInitialized } = useFHEStore();
   const { hasValidPermit } = usePermit();
   const {
     encryptedIndex,
